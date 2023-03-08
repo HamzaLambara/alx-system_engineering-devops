@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# This script prints the absolute path name of the current working directory
+pwd
 
-# Using the 'pwd' command to print the current working directory
-# The '-P' option makes 'pwd' follow symbolic links to their final destination
-dir=$(pwd -P)
-
-# Printing the directory
-echo "$dir"
 
