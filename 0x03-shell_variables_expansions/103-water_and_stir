@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%x\n' "$((0x${WATER}) + 0x${STIR})"
+echo "ibase=\$((26#${WATER}))+ibase=\$((26#${STIR}))" | bc | tr '0-9a-z' 'a-zA-Z'
