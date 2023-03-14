@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -o '[^/]*$' | awk '{print $1"."$2}' | awk -F "." '{print $(NF-1)"."$NF}'
+echo "$1" | awk '{for(i=1;i<=length;i++){c=substr($0,i,1);if(c~/[A-Za-z]/){if(c~/[N-Zn-z]/)c=chr(ord(c)-13);else c=chr(ord(c)+13);}printf("%s",c);}}END{printf("\n");}'
