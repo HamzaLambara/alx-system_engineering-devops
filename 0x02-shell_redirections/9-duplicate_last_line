@@ -1,2 +1,7 @@
 #!/bin/bash
-sed  '$p' iacta >> iacta
+
+# Get the last line of the file
+last_line=$(tail -n1 iacta)
+
+# Duplicate the last line
+echo "$last_line" >> iacta
