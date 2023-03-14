@@ -1,2 +1,2 @@
-#!/bin/bash
-echo $(echo $WATER | tr -d 'ewa' | tr 'tir' '10') + $(echo $STIR | tr -d 'tir' | tr 'ewa' '10') | bc | tr '0123456789ABC' 'gtaio luSnemf'
+#!/bin/sh
+printf '%x\n' "$((0x${WATER}) + 0x${STIR})"
