@@ -1,0 +1,13 @@
+#!/bin/bash
+
+count=0
+
+# Loop over all directories (including hidden ones) in the current directory
+for dir in $(find . -type d); do
+  # Ignore the current and parent directories and hidden directories
+  if [ "$dir" != "." ] && [ "$dir" != ".." ] && [[ "$dir" != "./.*" ]]; then
+    count=$((count+1))
+  fi
+done
+
+echo $count
