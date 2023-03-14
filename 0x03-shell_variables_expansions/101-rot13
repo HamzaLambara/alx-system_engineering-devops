@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$1" | awk '{for(i=1;i<=length;i++){c=substr($0,i,1);if(c~/[A-Za-z]/){if(c~/[N-Zn-z]/)c=chr(ord(c)-13);else c=chr(ord(c)+13);}printf("%s",c);}}END{printf("\n");}'
+echo "$1" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
